@@ -1236,37 +1236,7 @@ let studentsDetail = [
   
   const tbody = document.querySelector('tbody') //Acess Tbody from html
   
-  // console.log(tbody)
-  
-  // let newData=studentsDetail.map((item)=>{
-  
-  // const{id,img_src,first_name,last_name,gender,class:classes,marks,passing,email}=item
-  
-  //     return ` <tr align="center">
-  //         <td>${id}</td>
-  //         <td>
-  //             <img src=${img_src} alt="profile-image">
-  //             <span> ${first_name} ${last_name}</span>
-  //            </td>
-  //         <td>${gender}</td>
-  //         <td>${classes}</td>
-  //         <td>${marks}</td>
-  //         <td>${passing}</td>
-  //         <td>${email}</td>
-  //     </tr>`
-  
-  // })
-  
-  // tbody.innerHTML=newData.join('')
-  // let example=document.querySelector('.example')
-  // let arr=['shivam','satish','devi',5,'bhagwan']
-  // let newArr=arr.map((item)=>{
-  //     return `<h1>${item}</h1>`
-  // })
-  
-  // example.innerHTML=newArr.join('')
-  
-  // console.log(newArr)
+
   
   function getContainer(arr, container) {
     let newData = arr.map((item) => {
@@ -1299,7 +1269,7 @@ let studentsDetail = [
     container.innerHTML = newData.join('')
   
     if (arr.length <= 0) {
-      return (container.innerHTML = `<h2>item not found</h3>`)
+      return (container.innerHTML = `<h2>item not found</h2>`)
     }
   }
   
@@ -1396,16 +1366,16 @@ let studentsDetail = [
   
   // to Search Engine to search Name
   const btn = document.querySelector('.search-btn')
-  console.log(btn)
+  // console.log(btn)
   
   btn.addEventListener('click', () => {
     let value = input.value.toLowerCase()
-    console.log(value)
+    // console.log(value)
     let newArray = studentsDetail.filter((item) =>
       item.first_name.toLowerCase().includes(value)
     )
   
-    console.log(newArray)
+    // console.log(newArray)
     getContainer(newArray, tbody)
   })
   
@@ -1422,4 +1392,38 @@ let studentsDetail = [
   getContainer(newArray, tbody)
   
   })
+
   
+  
+// OTHER CODE
+    // console.log(tbody)
+  
+  // let newData=studentsDetail.map((item)=>{
+  
+  // const{id,img_src,first_name,last_name,gender,class:classes,marks,passing,email}=item
+  
+  //     return ` <tr align="center">
+  //         <td>${id}</td>
+  //         <td>
+  //             <img src=${img_src} alt="profile-image">
+  //             <span> ${first_name} ${last_name}</span>
+  //            </td>
+  //         <td>${gender}</td>
+  //         <td>${classes}</td>
+  //         <td>${marks}</td>
+  //         <td>${passing}</td>
+  //         <td>${email}</td>
+  //     </tr>`
+  
+  // })
+  
+  // tbody.innerHTML=newData.join('')
+  // let example=document.querySelector('.example')
+  // let arr=['shivam','satish','devi',5,'bhagwan']
+  // let newArr=arr.map((item)=>{
+  //     return `<h1>${item}</h1>`
+  // })
+  
+  // example.innerHTML=newArr.join('')
+  
+  // console.log(newArr)
